@@ -1,5 +1,4 @@
 import random
-import datetime
 #The Genes, Target and Input
 print ("Overview")
 print ("This genetic algorithm generates your desired word/phrase from, basically nonsense")
