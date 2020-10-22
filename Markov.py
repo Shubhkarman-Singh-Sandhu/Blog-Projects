@@ -27,10 +27,8 @@ def make_string(Dict, length): # Make the randomised string
             string += newWords + ' ' # Add that to our String with a space!
 
             for word in range(len(oldWords)):
-                oldWords[word] = oldWords[(word + 1) % len(oldWords)] # Flip the words
-                print("oldwords:", oldWords)
+                oldWords[word] = oldWords[(word + 1) % len(oldWords)] # Flip the words  
             oldWords[-1] = newWords # Make the last item of our starting words our new Words
-            print("oldwordsPPPPPP:", oldWords)
         except KeyError:
             return string
     return string
