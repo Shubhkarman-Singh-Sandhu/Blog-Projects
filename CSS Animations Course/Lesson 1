@@ -1,0 +1,44 @@
+<!DOCTYPE html />
+<html>
+<head>
+  <title>First Lesson</title>
+  <style>
+    #box {
+      background-color: pink;
+      height: 150px; 
+      position: absolute; 
+      width: 150px;
+      animation: animation 2s infinite forwards linear;
+    }
+    /* Method 1
+    @keyframes animation {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      100% {
+        transform: translate(300px, 0px);
+      }
+    }
+    */
+    /* Method 2
+    @keyframes animation {
+      from {
+        transform: translate(0px, 0px);
+      }
+      to {
+        transform: translate(300px, 0px);
+      }
+    }
+    */
+    /* Method 3 */
+    @keyframes animation {
+      to {
+        transform: translate(400px, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+</body>
+</html>
