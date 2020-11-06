@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Lesson</title>
+    <style>
+        :root {
+            --dimen: 100px;
+            --loc: calc(var(--dimen)/2);
+            --X: 700px;
+            --Y: 300px;
+            --time: 2s;
+        }
+        body {
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+        #sq1 {
+            height: var(--dimen);
+            width: var(--dimen);
+            position: absolute;
+            background-image: linear-gradient(-145deg, pink, orange);
+            transform: translate(calc(var(--X) - var(--loc)), calc(var(--Y) + var(--loc)));
+            animation: sq1 var(--time) alternate infinite ease-in-out;
+        }
+        #sq2 {
+            height: var(--dimen);
+            width: var(--dimen);
+            position: absolute;
+            background-image: linear-gradient(145deg, pink, orange);
+            transform: translate(calc(var(--X) + var(--loc)), calc(var(--Y) + var(--loc)));
+            animation: sq2 var(--time) alternate infinite ease-in-out;
+        }
+        #sq3 {
+            height: var(--dimen);
+            width: var(--dimen);
+            position: absolute;
+            background-image: linear-gradient(45deg, pink, orange);
+            transform: translate(calc(var(--X) + var(--loc)), calc(var(--Y) - var(--loc)));
+            animation: sq3 var(--time) alternate infinite ease-in-out;
+        }
+        #sq4 {
+            height: var(--dimen);
+            width: var(--dimen);
+            position: absolute;
+            background-image: linear-gradient(-45deg, pink, orange);
+            transform: translate(calc(var(--X) - var(--loc)), calc(var(--Y) - var(--loc)));
+            animation: sq4 var(--time) alternate infinite ease-in-out;
+        }
+        @keyframes sq1 {
+            0% {
+                transform: translate(calc(var(--X) - var(--loc)), calc(var(--Y) + var(--loc)));
+            }
+            90% {
+                transform: translate(calc(var(--X) - var(--dimen)), calc(var(--Y) + var(--dimen))) rotate(90deg);
+            }
+            100% {
+                transform: translate(calc(var(--X) - var(--dimen)), calc(var(--Y) + var(--dimen))) rotate(90deg);
+                filter: hue-rotate(-90deg);
+            }
+        }        
+        @keyframes sq2 {
+            0% {
+                transform: translate(calc(var(--X) + var(--loc)), calc(var(--Y) + var(--loc)));
+            }
+            90% {
+                transform: translate(calc(var(--X) + var(--dimen)), calc(var(--Y) + var(--dimen))) rotate(-90deg);
+            }
+            100% {
+                transform: translate(calc(var(--X) + var(--dimen)), calc(var(--Y) + var(--dimen))) rotate(-90deg);
+                filter: hue-rotate(-90deg);
+            }
+        }
+        @keyframes sq3 {
+            0% {
+                transform: translate(calc(var(--X) + var(--loc)), calc(var(--Y) - var(--loc)));
+            }
+            90% {
+                transform: translate(calc(var(--X) + var(--dimen)), calc(var(--Y) - var(--dimen))) rotate(90deg);
+            }
+            100% {
+                transform: translate(calc(var(--X) + var(--dimen)), calc(var(--Y) - var(--dimen))) rotate(90deg);
+                filter: hue-rotate(-90deg);
+            }
+        }
+        @keyframes sq4 {
+            0% {
+                transform: translate(calc(var(--X) - var(--loc)), calc(var(--Y) - var(--loc)));
+            }
+            90% {
+                transform: translate(calc(var(--X) - var(--dimen)), calc(var(--Y) - var(--dimen))) rotate(-90deg);
+            }
+            100% {
+                transform: translate(calc(var(--X) - var(--dimen)), calc(var(--Y) - var(--dimen))) rotate(-90deg);
+                filter: hue-rotate(-90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sq1"></div>
+    <div id="sq2"></div>
+    <div id="sq3"></div>
+    <div id="sq4"></div>
+</body>
+</html>
