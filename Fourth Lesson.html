@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth Lesson</title>
+    <style>
+        :root {
+            --width: 150px;
+            --height: 250px;
+            --border: 10px;
+            --screenWidth: calc(800px - var(--width));
+            --screenHeight: calc(400px - var(--width));
+            --depth: 150px;
+            
+        }
+        body {
+            background-color: #FFF8DC;
+        }
+        .con {
+            position: absolute;
+            transform: translate(var(--screenWidth), var(--screenHeight)) rotate3d(1, 1, 0, 40deg);
+            transform-style: preserve-3d;
+        }
+        #layer1 {
+            width: calc(var(--width) - 2*(var(--border)));
+            height: calc(var(--height) - 2*(var(--border)));
+            border: var(--border) solid red;
+            z-index: -1;
+            box-shadow: -6px 6px 8px 2px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            transform: translateZ(0px);
+        }
+        .an1 {
+            animation: card1 1s infinite linear alternate;
+        }
+        #layer2 {
+            width: var(--width);
+            height: var(--height);
+            background-color: rgb(255, 255, 0);
+            z-index: -2;
+            box-shadow: -6px 6px 8px 2px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            transform: translateZ(-75px);
+        }
+        .an2{
+            animation: card2 1s infinite linear alternate;
+        }
+        #layer3 {
+            width: var(--width);
+            height: var(--height);
+            box-shadow: -6px 6px 8px 2px rgba(0, 0, 0, 0.5);
+            background-color: rgb(255, 0, 0);
+            z-index: -3;
+            position: absolute;
+            transform: translateZ(-150px);
+        }
+        .an3 {
+            animation: card3 1s infinite linear alternate;
+        }
+        @keyframes card1 {
+            to {
+                transform: rotate3d(1, 1, 0, -40deg);
+                z-index: -1;
+            }
+        }
+        @keyframes card2 {
+            to {
+                transform: rotate3d(1, 1, 0, -40deg);
+                z-index: -2;
+            }
+        }
+        @keyframes card3 {
+            to {
+                transform: rotate3d(1, 1, 0, -40deg);
+                z-index: -3;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="con" onclick="hello()">
+        <div id="layer1"></div>
+        <div id="layer2"></div>
+        <div id="layer3"></div>
+    </div>
+    <script>
+        function hello() {
+            document.getElementById('layer1').classList.add('an1'); 
+            document.getElementById('layer2').classList.add('an2'); 
+            document.getElementById('layer3').classList.add('an3');
+            setTimeout(function(){
+                document.getElementById('layer1').classList.remove('an1'); 
+                document.getElementById('layer2').classList.remove('an2'); 
+                document.getElementById('layer3').classList.remove('an3');
+            }, 2000); 
+        }
+    </script>
+</body>
+</html>
