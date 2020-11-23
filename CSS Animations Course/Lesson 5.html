@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <style>
+        :root {
+            --timer: 0.5s;
+        }
+        @property --size {
+            syntax: '<length>';
+            initial-value: 10px;
+            inherits: false;
+        }
+        body {
+            background-color: rgb(0, 0, 0);
+            padding: 0;
+            margin: 0;
+        }
+        div > span {
+            height: var(--size);
+            width: var(--size);
+            border-radius: 50%;
+            border: 10px solid white;
+            position: absolute;   
+            transform: translate(1600px, 400px) rotateY(60deg);
+            padding: 0;
+            margin: 0;
+            animation: anime calc(var(--timer)*15) infinite forwards linear;
+            
+        }
+        @keyframes anime {
+            to {
+                transform: translate(-400px, 150px) rotateY(60deg);
+                --size: 500px;
+            }
+        }
+        span:nth-child(1) {
+            animation-delay: calc(var(--timer)*0);
+        }
+        
+        span:nth-child(2) {
+            animation-delay: calc(var(--timer)*1)
+        }
+        
+        span:nth-child(3) {
+            animation-delay: calc(var(--timer)*2);
+        }
+        
+        span:nth-child(4) {
+            animation-delay: calc(var(--timer)*3);
+        }
+        span:nth-child(5) {
+            animation-delay: calc(var(--timer)*4);
+        }
+        span:nth-child(6) {
+            animation-delay: calc(var(--timer)*5);
+        }
+        span:nth-child(7) {
+            animation-delay: calc(var(--timer)*6);
+        }
+        span:nth-child(8) {
+            animation-delay: calc(var(--timer)*7);
+        }
+        span:nth-child(9) {
+            animation-delay: calc(var(--timer)*8);
+        }
+        span:nth-child(10) {
+            animation-delay: calc(var(--timer)*9);
+        }
+        span:nth-child(11) {
+            animation-delay: calc(var(--timer)*10);
+        }
+        span:nth-child(12) {
+            animation-delay: calc(var(--timer)*11);
+        }
+        span:nth-child(13) {
+            animation-delay: calc(var(--timer)*12);
+        }
+        span:nth-child(14) {
+            animation-delay: calc(var(--timer)*13);
+        }
+        span:nth-child(15) {
+            animation-delay: calc(var(--timer)*14);
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
