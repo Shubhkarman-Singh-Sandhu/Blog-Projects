@@ -11,10 +11,14 @@ The concepts covered in the each lesson are as follows.
   - Deeper introduction to Keyframes.
   - Study of a basic animation.
 - Lesson 4
-  - Using JavaScript to call an animation.
+  - Using JavaScript to call an animation. [^1]
   - Introduction to 3D animations.
   - Study of an animation.
 - Lesson 5
   - Creating variables in CSS, using [Houdini](https://originalcodingcult.blogspot.com/2020/10/this-will-change-web-forever.html).
   - Techniques, using span-tag and CSS Pseudo Element, to repeat animations on several elements.
   - Study of an animation.
+
+---
+
+[^1]: If you are intersested in creating animation in only JavaScript, then the explaination for that can be found [here](https://originalcodingcult.blogspot.com/2021/04/pure-javascript-animations.html).
