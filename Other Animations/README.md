@@ -3,6 +3,8 @@ This folder contains the source code to all of the other animations explained on
 
 - SMIL based SVG animations
   - Jolly does Pullups ([Pullups.html](https://github.com/Shubhkarman-Singh-Sandhu/Blog-Projects/blob/main/Other%20Animations/Pullups.html))
+- CSS based SVG animations
+  - Jolly does Skipping ([Skipping.html](https://github.com/Shubhkarman-Singh-Sandhu/Blog-Projects/blob/main/Other%20Animations/Skipping.html))
 ---
 ### PS
 Jolly is a stick figure :)
