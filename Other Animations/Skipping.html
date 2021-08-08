@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skipper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0%;
+            overflow: hidden;
+            background-color: rgb(247, 202, 201);
+        }
+        .human {
+            fill: None;
+            stroke:black ;
+            stroke-width:10; 
+            stroke-linecap: round;
+        }
+        #head {
+            fill:rgb(243, 224, 190);
+        }
+        #floor {   
+            fill: None;
+            stroke:rgb(100, 100, 100);
+            stroke-width: 20; 
+            stroke-linecap:"round";
+        }
+        #rope {
+            fill: None;
+            stroke-width: 11;
+            stroke: green;
+            stroke-linecap: round;
+            animation: skippy 1s alternate infinite ease-in-out;
+            transform-origin: 50% 65%; 
+            z-index: 1;   
+        }
+       
+        @keyframes skippy {
+            to {
+                transform: translateY(-50px) scaleY(-0.7);
+                z-index: -1;
+            }
+        }
+
+        #human-being {
+            z-index: 0;
+            animation: jumper 1s alternate infinite ease-in-out;
+        }
+
+        @keyframes jumper {
+            to {
+                transform: translateY(-50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg width='500' height='800'>
+        <g id="human-being">
+            <circle class='human' id='head'cx='200' cy='300' r='60'>
+            </circle>
+
+            <polyline class='human' id='body' points='200,365 200,550'>
+            </polyline>
+
+            <polyline class='human' id='armR' points='200,365 235,455 280,515'>
+            </polyline>
+
+            <polyline class='human' id='armL' points='200,365 165,455 120,515'>
+            </polyline>
+
+            <polyline class='human' id='legR' points='200,550 255,695'>            
+            </polyline>
+
+            <polyline class='human' id='legL' points='200,550 145,695'>
+            </polyline>
+        </g>
+        <path id='rope' d='m 115,517 c -70,-420 230,-420 170,0' />
+        
+
+        <polyline id='floor' points="0,710 400,710"></polyline>
+    </svg>
+    
+</body>
+</html>
